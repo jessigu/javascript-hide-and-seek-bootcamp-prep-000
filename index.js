@@ -1,5 +1,5 @@
 function getFirstSelector (selector) {
-  return document.querySelector('div#nested');
+  return document.getElementById('nested').querySelector('div');
 }
 
 function nestedTarget() {
@@ -10,11 +10,20 @@ function nestedTarget() {
 function increaseRankBy(n) {
   const li = document.getElementById('app').querySelectorAll('ul.ranked-list li');
   for (let i = 0; i < li.length; i++) {
-    li[i].innerHTML = i + n;
+    li[i].innerHTML = parseInt(i, n);
   }
-  return li;
 }
 
 function deepestChild() {
   return document.getElementById('grand-node').querySelectorAll('div')[3];
 }
+
+
+/*
+const lis = document
+  .getElementById("app")
+  .querySelectorAll("ul.ranked-list li");
+ 
+for (let i = 0; i < lis.length; i++) {
+  lis[i].innerHTML = (i + 1).toString();
+}*/
