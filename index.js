@@ -4,6 +4,10 @@ function nestedTarget() {
   return document.getElementById('nested').querySelector('div.target');
 }
 
+function deepestChild() {
+  return document.getElementById('grand-node').querySelectorAll('div')[3];
+}
+
 function increaseRankBy(n) {
   const li = document.getElementById('app').querySelectorAll('ul.ranked-list li');
   for (let i = 0; i < li.length; i++) {
@@ -11,18 +15,14 @@ function increaseRankBy(n) {
   }
 }
 
-function deepestChild() {
-  return document.getElementById('grand-node').querySelectorAll('div')[3];
+function increaseRankBy(n) {
+  const rankedList = document.querySelectorAll('.ranked-list');
 }
-
-
 /*
-<body>
     <main id="app">
       <ul class="ranked-list">
         <li>1</li>
         <li>2</li>
-      </ul>
       <ul class="ranked-list">
         <li>12</li>
         <li>11</li>
