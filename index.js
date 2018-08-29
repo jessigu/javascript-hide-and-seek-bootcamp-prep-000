@@ -16,10 +16,9 @@ function increaseRankBy(n) {
 }
 
 function increaseRankBy(n) {
-  const rankedList = document.querySelectorAll('.ranked-list');
-  const firstList = rankedList[0]
-  const secondList = rankedList[2]
-  let children = firstList.children
+  const firstList = document.getElementById('app').querySelectorAll('ul.ranked-list li')[0];
+  const secondList = document.getElementById('app').querySelectorAll('ul.ranked-list li')[2];
+  let children = firstList.
   let start = 1;
   
   for (let i = 0; i < children.length; i++) {
