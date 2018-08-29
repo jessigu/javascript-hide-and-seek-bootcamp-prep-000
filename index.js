@@ -9,48 +9,8 @@ function deepestChild() {
 }
 
 function increaseRankBy(n) {
-  const rankedList = document.getElementById('app').querySelectorAll('.ranked-list');
-  const firstList = document.querySelectorAll('li')[0];
-  const secondList = document.querySelectorAll('li')[1];
-  let startFirst = 1;
-  let startSecond = 12;
-  
-  for (let i = 0; i < firstList.length; i++) {
-    firstList[i].innerHTML = parseInt(startFirst, n) 
-  }
-
-  for (let i = 0; i < secondList.length; i++) {
-    secondList[i].innerHTML = parseInt(startSecond, n) 
-  }
-  return rankedList.innerHTML;
-}
-
-/* 
-
-function increaseRankBy(n) {
   const li = document.getElementById('app').querySelectorAll('ul.ranked-list li');
   for (let i = 0; i < li.length; i++) {
-    li[i].innerHTML = parseInt(i, n);
+    li[i].innerHTML = parseInt(li[i].innerHTML) + n;
   }
 }
-<ul class="ranked-list">
-        <li>1</li>
-        <li>2</li>
-      <ul class="ranked-list">
-        <li>12</li>
-        <li>11</li>
-        <li>10</li>
-
-      let children = firstList.children
-      let start = 1
-      for (let i = 0, l = children.length; i < l; i++) {
-        expect(parseInt(children[i].innerHTML)).to.equal(start + i + 3)
-      }
-
-      children = secondList.children
-      start = 12
-
-      for (let i = 0, l = children.length; i < l; i++) {
-        expect(parseInt(children[i].innerHTML)).to.equal(start - i + 3)
-      }
-}*/
