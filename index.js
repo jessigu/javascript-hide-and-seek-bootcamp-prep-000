@@ -1,4 +1,4 @@
-const getFirstSelector = (selector) => return document.querySelector('div');
+const getFirstSelector = selector => document.querySelector('div');
 
 function nestedTarget() {
   return document.getElementById('nested').querySelector('div.target');
