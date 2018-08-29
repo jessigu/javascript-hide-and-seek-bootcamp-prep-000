@@ -9,32 +9,30 @@ function deepestChild() {
 }
 
 function increaseRankBy(n) {
+  const firstList = document.getElementById('app').querySelectorAll('ul.ranked-list li')[0];
+  const secondList = document.getElementById('app').querySelectorAll('ul.ranked-list li')[2];
+  let startFirst = 1;
+  let startSecond = 12;
+  
+  for (let i = 0; i < firstList.length; i++) {
+    firstList[i].innerHTML = parseInt(startFirst, n) 
+  }
+
+  for (let i = 0; i < secondList.length; i++) {
+    secondList[i].innerHTML = parseInt(startSecond, n) 
+  }
+  return children.innerHTML;
+}
+
+/* 
+
+function increaseRankBy(n) {
   const li = document.getElementById('app').querySelectorAll('ul.ranked-list li');
   for (let i = 0; i < li.length; i++) {
     li[i].innerHTML = parseInt(i, n);
   }
 }
-
-function increaseRankBy(n) {
-  const firstList = document.getElementById('app').querySelectorAll('ul.ranked-list li')[0];
-  const secondList = document.getElementById('app').querySelectorAll('ul.ranked-list li')[2];
-  let children = firstList.
-  let start = 1;
-  
-  for (let i = 0; i < children.length; i++) {
-    children[i].innerHTML = parseInt(i, n) + start
-  }
-  
-  children = secondList.children
-  start = 12;
-  
-  for (let i = 0; i < children.length; i++) {
-    children[i].innerHTML = parseInt(i, n) + start
-  }
-  return children.innerHTML;
-}
-
-/* <ul class="ranked-list">
+<ul class="ranked-list">
         <li>1</li>
         <li>2</li>
       <ul class="ranked-list">
