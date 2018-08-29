@@ -17,25 +17,31 @@ function increaseRankBy(n) {
 
 function increaseRankBy(n) {
   const rankedList = document.querySelectorAll('.ranked-list');
+  const firstList = rankedList[0]
+  const secondList = rankedList[2]
+  let children = firstList.children
+  let start = 1;
+  
+  for (let i = 0; i < children.length; i++) {
+    children[i].innerHTML = parseInt(i, n) + start
+  }
+  
+  children = secondList.children
+  start = 12;
+  
+  for (let i = 0; i < children.length; i++) {
+    children[i].innerHTML = parseInt(i, n) + start
+  }
+  return children.innerHTML;
 }
-/*
-    <main id="app">
-      <ul class="ranked-list">
+
+/* <ul class="ranked-list">
         <li>1</li>
         <li>2</li>
       <ul class="ranked-list">
         <li>12</li>
         <li>11</li>
         <li>10</li>
-      </ul>
-      
-      describe('increaseRankBy(n)', () => {
-    it('increases ranks in .ranked-list by n', () => {
-      increaseRankBy(3)
-
-      const rankedLists = document.querySelectorAll('.ranked-list')
-      const firstList = rankedLists[0]
-      const secondList = rankedLists[1]
 
       let children = firstList.children
       let start = 1
